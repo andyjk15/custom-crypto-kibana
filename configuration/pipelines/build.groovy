@@ -25,8 +25,8 @@ String get_application_version() {
     "1.0.0-b${env.BUILD_NUMBER}"
 }
 
-String executeShellScript( String shellPath, String arg1 = '', String arg2 = '', String arg3 = '', String arg4 = '' ) {
-    sh "./${shellPath} ${arg1} ${arg2} ${arg3} ${arg4}"
+String executeShellScript( String shellPath, String arg1 = '', String arg2 = '', String arg3 = '', String arg4 = '', String arg5 = '', String arg6 = '', String arg7= '' ) {
+    sh "./${shellPath} ${arg1} ${arg2} ${arg3} ${arg4} ${arg5} ${arg6} ${arg7}"
 }
 
 try {
