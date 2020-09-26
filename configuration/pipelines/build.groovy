@@ -9,7 +9,7 @@ env.FLUENTD_APPLICATION_NAME   = 'fluentd'
 env.FLUENTD_APPLICATION_LABEL  = 'fluentd'
 
 env.GIT_BRANCH          = 'master'
-env.GIT_REPOSITORY_PATH = "github.com/andyjk15/custom-crypto-${env.APPLICATION_NAME}.git"
+env.GIT_REPOSITORY_PATH = "github.com/andyjk15/custom-crypto-${env.KIBANA_APPLICATION_NAME}.git"
 env.GIT_REPOSITORY_URL  = "https://${env.GIT_REPOSITORY_PATH}"
 env.GITHUB_CREDENTIALS_ID = 'Github'
 env.DIGITAL_OCEAN = 'registry.digitalocean.com'
