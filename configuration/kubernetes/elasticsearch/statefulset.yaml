@@ -32,6 +32,8 @@ spec:
         volumeMounts:
         - name: data
           mountPath: /usr/share/elasticsearch/data
+        - name: config
+          mountPath: /usr/share/elasticsarch/config
         env:
           - name: cluster.name
             value: k8s-logs
@@ -42,7 +44,7 @@ spec:
           - name: discovery.seed_hosts
             value: "es-cluster-0.elasticsearch,es-cluster-1.elasticsearch,es-cluster-2.elasticsearch"
           - name: cluster.initial_master_nodes
-            value: "es-cluster-0,es-cluster-1,es-cluster-2"
+            value: "es-cluster-0,es-cluster-1"
           - name: ES_JAVA_OPTS
             value: "-Xms512m -Xmx512m"
       initContainers:
@@ -54,6 +56,8 @@ spec:
         volumeMounts:
         - name: data
           mountPath: /usr/share/elasticsearch/data
+        - name: config
+          mountPath: /usr/share/elasticsarch/config
       - name: increase-vm-max-map
         image: busybox
         command: ["sysctl", "-w", "vm.max_map_count=262144"]
@@ -64,6 +68,10 @@ spec:
         command: ["sh", "-c", "ulimit -n 65536"]
         securityContext:
           privileged: true
+      volumes:
+        - name: config
+          configMap:
+            name: elasticConfig
   volumeClaimTemplates:
   - metadata:
       name: data
@@ -75,3 +83,15 @@ spec:
       resources:
         requests:
           storage: 100Gi
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elasticConfig
+  namespace: kube-logging
+data:
+  elasticsearch.yml: |-
+    cluster.name: "docker-cluster"
+    network.host: 0.0.0.0
+    xpack.security.enabled: true
+    discovery.type: multi-node
