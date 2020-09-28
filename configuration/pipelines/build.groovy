@@ -52,7 +52,7 @@ try {
 
             stage('Configure Configs') {
 
-                sh "kubectl apply -f configuration/elasticsearch/configMap.yaml"
+                sh "kubectl apply -f configuration/kubernetes/elasticsearch/configMap.yaml"
 
                 executeShellScript("configuration/scripts/mapVarsToConfigs.sh",
                         env.KIBANA_APPLICATION_NAME,
