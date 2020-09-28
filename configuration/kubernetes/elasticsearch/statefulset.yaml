@@ -83,15 +83,3 @@ spec:
       resources:
         requests:
           storage: 100Gi
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: elasticConfig
-  namespace: kube-logging
-data:
-  elasticsearch.yml: |-
-    cluster.name: "docker-cluster"
-    network.host: 0.0.0.0
-    xpack.security.enabled: true
-    discovery.type: multi-node

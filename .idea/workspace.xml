@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef0c9fab-3773-4f52-b8d4-dedba590e104" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration/kubernetes/elasticsearch/configMap.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuration/kubernetes/elasticsearch/statefulset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration/kubernetes/elasticsearch/statefulset.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration/pipelines/build.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/configuration/pipelines/build.groovy" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
       <updated>1601070915586</updated>
       <workItem from="1601070916777" duration="107000" />
       <workItem from="1601119833819" duration="9119000" />
-      <workItem from="1601282834282" duration="2280000" />
+      <workItem from="1601282834282" duration="3019000" />
     </task>
     <task id="LOCAL-00001" summary="[26.09.2020] First commit">
       <created>1601145908747</created>
@@ -90,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601146617170</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="[28.09.2020] Mounting custom Config for security">
+      <created>1601285420531</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601285420531</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,16 +107,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[26.09.2020] First commit" />
     <MESSAGE value="[26.09.2020] pipeline fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="[26.09.2020] pipeline fix" />
+    <MESSAGE value="[28.09.2020] Mounting custom Config for security" />
+    <option name="LAST_COMMIT_MESSAGE" value="[28.09.2020] Mounting custom Config for security" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="852" y="181" key="CommitChangelistDialog2" timestamp="1601146616919">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="-1644" y="174" width="1219" height="1037" key="CommitChangelistDialog2" timestamp="1601285420219">
+      <screen x="-1920" y="171" width="1920" height="1040" />
     </state>
+    <state x="-1644" y="174" width="1219" height="1037" key="CommitChangelistDialog2/0.0.2560.1400/-1920.171.1920.1040@-1920.171.1920.1040" timestamp="1601285420219" />
     <state x="852" y="181" key="CommitChangelistDialog2/0.0.2560.1400/-1920.171.1920.1040@0.0.2560.1400" timestamp="1601146616919" />
-    <state x="872" y="429" key="Vcs.Push.Dialog.v2" timestamp="1601146618374">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="-1266" y="490" key="Vcs.Push.Dialog.v2" timestamp="1601285422872">
+      <screen x="-1920" y="171" width="1920" height="1040" />
     </state>
+    <state x="-1266" y="490" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.171.1920.1040@-1920.171.1920.1040" timestamp="1601285422872" />
     <state x="872" y="429" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.171.1920.1040@0.0.2560.1400" timestamp="1601146618374" />
     <state x="-1252" y="408" width="583" height="566" key="find.popup" timestamp="1601283019472">
       <screen x="-1920" y="171" width="1920" height="1040" />
