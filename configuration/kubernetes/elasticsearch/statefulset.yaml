@@ -71,7 +71,7 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: elasticConfig
+            name: elasticconfig
   volumeClaimTemplates:
   - metadata:
       name: data
