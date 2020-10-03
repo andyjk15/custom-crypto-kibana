@@ -3,12 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ef0c9fab-3773-4f52-b8d4-dedba590e104" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuration/kubernetes/elasticsearch/statefulset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration/kubernetes/elasticsearch/statefulset.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration/kubernetes/fluentd/daemonset.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configuration/kubernetes/fluentd/daemonset.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/configuration/scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fluentd-kubernetes-daemonset" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -44,19 +47,6 @@
       <recent name="C:\Users\andre\Documents\Projects\custom-kibana\configuration\scripts" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,7 +57,9 @@
       <updated>1601070915586</updated>
       <workItem from="1601070916777" duration="107000" />
       <workItem from="1601119833819" duration="9119000" />
-      <workItem from="1601282834282" duration="4564000" />
+      <workItem from="1601282834282" duration="5804000" />
+      <workItem from="1601723075322" duration="25000" />
+      <workItem from="1601725322870" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="[26.09.2020] First commit">
       <created>1601145908747</created>
@@ -118,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601286410166</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[28.09.2020] Reduced block storage">
+      <created>1601287648901</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601287648901</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,18 +129,23 @@
     <MESSAGE value="[28.09.2020] Mounting custom Config for security" />
     <MESSAGE value="[28.09.2020] Wrong Path specified" />
     <MESSAGE value="[28.09.2020] Configmap uppercase issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="[28.09.2020] Configmap uppercase issues" />
+    <MESSAGE value="[28.09.2020] Reduced block storage" />
+    <option name="LAST_COMMIT_MESSAGE" value="[28.09.2020] Reduced block storage" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1644" y="174" width="1219" height="1037" key="CommitChangelistDialog2" timestamp="1601286409892">
+    <state x="-1644" y="174" width="1219" height="1037" key="CommitChangelistDialog2" timestamp="1601287648637">
       <screen x="-1920" y="171" width="1920" height="1040" />
     </state>
-    <state x="-1644" y="174" width="1219" height="1037" key="CommitChangelistDialog2/0.0.2560.1400/-1920.171.1920.1040@-1920.171.1920.1040" timestamp="1601286409892" />
+    <state x="-1644" y="174" width="1219" height="1037" key="CommitChangelistDialog2/0.0.2560.1400/-1920.171.1920.1040@-1920.171.1920.1040" timestamp="1601287648637" />
     <state x="852" y="181" key="CommitChangelistDialog2/0.0.2560.1400/-1920.171.1920.1040@0.0.2560.1400" timestamp="1601146616919" />
-    <state x="-1266" y="490" key="Vcs.Push.Dialog.v2" timestamp="1601286411108">
+    <state x="-1180" y="446" key="FileChooserDialogImpl" timestamp="1601723098438">
       <screen x="-1920" y="171" width="1920" height="1040" />
     </state>
-    <state x="-1266" y="490" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.171.1920.1040@-1920.171.1920.1040" timestamp="1601286411108" />
+    <state x="-1180" y="446" key="FileChooserDialogImpl/0.0.2560.1400/-1920.171.1920.1040@-1920.171.1920.1040" timestamp="1601723098438" />
+    <state x="-1266" y="490" key="Vcs.Push.Dialog.v2" timestamp="1601287649980">
+      <screen x="-1920" y="171" width="1920" height="1040" />
+    </state>
+    <state x="-1266" y="490" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.171.1920.1040@-1920.171.1920.1040" timestamp="1601287649980" />
     <state x="872" y="429" key="Vcs.Push.Dialog.v2/0.0.2560.1400/-1920.171.1920.1040@0.0.2560.1400" timestamp="1601146618374" />
     <state x="-1252" y="408" width="583" height="566" key="find.popup" timestamp="1601286978344">
       <screen x="-1920" y="171" width="1920" height="1040" />

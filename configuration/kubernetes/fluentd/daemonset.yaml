@@ -21,7 +21,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: RESOURCE_NAME
-        image: fluent/fluentd-kubernetes-daemonset:v1.4.2-debian-elasticsearch-1.1
+        image: registry.digitalocean.com/cryptosky-image-registry/fluentd-kubernetes-daemonset
         env:
           - name:  FLUENT_ELASTICSEARCH_HOST
             value: "elasticsearch.kube-logging.svc.cluster.local"
@@ -44,8 +44,8 @@ spec:
         - name: varlibdockercontainers
           mountPath: /var/lib/docker/containers
           readOnly: true
-#       imagePullSecrets:
-#         - name: registry-cryptosky-image-registry
+      imagePullSecrets:
+        - name: registry-cryptosky-image-registry
       terminationGracePeriodSeconds: 30
       volumes:
       - name: varlog
